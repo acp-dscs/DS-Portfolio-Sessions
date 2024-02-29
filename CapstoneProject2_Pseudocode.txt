@@ -1,0 +1,57 @@
+"""
+Task 21 Capstone Project 2 Pseudocode File
+Task 21.1 Capstone Project - Natural Language Processing Applications file (sentiment_analysis.py)
+
+This program performs sentiment analysis using the spaCy library.
+By loading the en_core_web_sm spaCy model to enable natural language processing tasks.
+Using the Amazon product review dataset (amazon_product_reviews.csv).
+Source: https://www.kaggle.com/datasets/datafiniti/consumer-reviews-of-amazon-products?resource=download
+The Dataset contains a list of over 34,000 consumer reviews for Amazon products.
+Necessary text cleaning and removal of stopwords has been undertaken for data analysis.
+
+Start
+1.  Download a dataset of product reviews: Consumer Reviews of Amazon Products.
+    a.  Save it as a CSV file, naming it: amazon_product_reviews.csv. 
+2.	Create a Python script, naming it: sentiment_analysis.py.
+3.  Develop a Python script for sentiment analysis.
+    a.  Within the script, perform the tasks outlined in Sections below, using the spaCy library.
+Section 1:
+1. Implement a sentiment analysis model using spaCy:
+    a.  Load the en_core_web_sm spaCy model to enable natural language processing tasks.
+    b.  This model will help analyse and classify the sentiment of the product reviews.
+Section 2:
+2. Preprocess the text data:
+    a.  Remove stopwords, and perform any necessary text cleaning to prepare the reviews for analysis.
+        2.1. To select the 'reviews.text' column from the dataset and retrieve its data, use square brackets notation.
+            The basic syntax is:
+            i.  reviews_data = dataframe['reviews.text']
+            This column, 'reviews.text,' represents the feature variable containing the product reviews we will use for sentiment analysis.
+        2.2. To remove all missing values from this column, you can simply use the dropna() function from Pandas using the following code:
+            i.  clean_data = dataframe.dropna(subset=['reviews.text'])
+Section 3:
+3. Create a function for sentiment analysis:
+    a.  Define a function that takes a product review as input and predicts its sentiment.
+Section 4:
+4. Test your model on sample product reviews:
+    a.  Test the sentiment analysis function on a few sample product reviews to verify its accuracy in predicting sentiment.
+    b.  Choose two product reviews from the 'reviews.text' column and compare their similarity.
+
+Appendix guidelines on cleaning text:
+A1. To remove stopwords, you can utilise:
+    a. The .is_stop attribute in spaCy.
+A2. Stopwords are common words that do not add much meaning to a sentence: "the", "is", and "of".
+    a.  To be left with a filtered list of tokens or words (words with no stop words) for conducting sentiment analysis.
+    b.  Make use of the lower(), strip() methods to clean text.
+A3. Use the spaCy model and the .sentiment attribute to:
+    a.  Analyse, Review and Determine: whether it expresses a Positive, Negative, or Neutral sentiment.
+        i.  Use .sentiment and .polarity attribute to analyse the review and determine;
+            Whether the review expresses a positive, negative, or neutral sentiment.
+    b.  You can use the .polarity attribute to measure the strength of the sentiment in a product review:
+        A polarity score of 1 indicates a very positive sentiment.
+        A polarity score of -1 indicates a very negative sentiment.
+        A polarity score of 0 indicates a neutral sentiment.
+    c. You can also use the similarity() function to compare the similarity of two product reviews:
+        A similarity score of 1 indicates that the two reviews are more similar.
+        A similarity score of 0 indicates that the two reviews are not similar.
+End
+"""

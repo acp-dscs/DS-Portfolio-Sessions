@@ -1,0 +1,63 @@
+"""
+Task 5 Capstone Project 1 Pseudocode File
+Task 5.1 Capstone Project - Variables and Control Structures file (finance_calculators.py)
+
+Start
+1.  Import the math module: 'import math'.
+2.  A small financial company have asked for a program that allows a user to access two different financial calculators: 
+	a. An investment calculator
+    b. A home loan repayment calculator
+3.  Section 1:
+    a. User will choose which calculation option they wish to proceed with.
+    b. Output Option 1 and Option 2 available to the user when the program runs:
+        i.  Option 1: Investment - to calculate the amount of interest you'll earn on your investment 
+        ii. Option 2: Bond - to calculate the amount you'll have to pay on a home loan. 
+    c. Print statement to welcome the user and select their choice of financial calculator:
+        i.  "At the end of this statement, please type either 'Investment' or 'Bond' from the menu to proceed with your preferred choice of financial calculator: "
+4.  Section 2:
+    a. Possible input errors: How the user capitalises the string ‘investment’ or ‘bond’ must be recognised. 
+        i.  All upper-case and lower-case mix of the correct spellings to be recognised as valid entries. 
+    c. Error handling: If the user types an invalid input, show an error message that covers all possible user input errors, and start again.
+5.  Section 3:
+    a. If Option 1 - ‘Investment’ is selected by the user, then:
+    b. Ask the user to input:
+        1.	The amount of money that they are depositing.
+        2.	The interest rate (as a percentage). Only the number of the interest rate should be entered (e.g. The user should enter 8 and not 8%.)
+        3.	The number of years they plan on investing.
+        4.	Then ask the user to input if they want “simple” or “compound” interest, and store this in a variable called 'interest'. 
+    c. Depending on whether or not they typed “simple” or “compound”.
+        i.  Output the appropriate amount that they will get back after the given period, at the specified interest rate. 
+    d. Python Interest formula:
+        i.  The total amount when simple interest is applied is calculated as follows:
+            A = P *(1 + r*t)
+        ii. The total amount when compound interest is applied is calculated as follows:
+            A = P * math.pow((1+r),t)
+    e.  In the formulae above:
+        ‘r’ is the interest entered above divided by 100, (e.g. if 8% is entered, then r is 0.08.)
+        ‘P’ is the amount that the user deposits. (initial investment)
+        ‘t’ is the number of years that the money is being invested. (time period)
+        ‘A’ is the total amount once the interest has been applied. (initial investment and interest)
+    f.  Print out the answer.
+    g.  Test with entering: (see what the difference is depending on the type of interest rate 'simple or compound'.)
+        i.  20 years
+        ii. 8 (%)
+        Simple Provides:
+        The total amount to be returned (i.e. initial investment and interest) following your initial investment of £100000.00 at an interest rate (simple) of 8.0% after 20 years will be: £260000.00
+        Compound Provides:
+        The total amount to be returned (i.e. initial investment and interest) following your initial investment of £100000.00 at an interest rate (compound) of 8.0% after 20 years will be: £466095.71
+6.  Section 4:
+    a. If Option 2 - ‘Bond’ is selected by the user, then:
+    b. Ask the user to input:
+        1.	The present value of the house. e.g. 100000
+        2.	The interest rate. e.g. 7
+        3.	The number of months they plan to take to repay the bond. e.g. 120
+    c. Python Bond repayment formula:
+        i.  The amount that a person will have to be repaid on a home loan each month is calculated as follows:
+            repayment = (i * P)/(1 - (1 + i)**(-n))
+    d. In the formula above:
+        ‘P’ is the present value of the house.
+        ‘i’ is the monthly interest rate, calculated by dividing the annual interest rate by 12. (e.g. (8 / 100) before dividing by 12.)
+        ‘n’ is the number of months over which the bond will be repaid.
+    e. Calculate how much money the user will have to repay each month and output the answer.
+End
+"""
